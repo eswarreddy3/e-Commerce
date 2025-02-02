@@ -1,0 +1,184 @@
+<!-- <div class="main">
+  <div class="header">
+      <div class="logo">
+          <img src="assets/logo.png" alt="Bujji Gunny Merchant Logo"  style="width: 21%;">
+      </div>
+      <div class="content">
+        <h1 class="display-4 font-italic mt-4" style="display: flex;justify-content: center;">Bujji Gunny Merchant</h1>
+        <p class="lead my-3" style="display: flex;justify-content: center;">Maddinagar, Chirala Road, Chilakaluripet</p>
+      </div>
+      <div class="contact">
+        <p class="lead my-3" style="margin-left: auto;">
+          <mat-icon>phone</mat-icon><span>8008100889</span> 
+        </p>
+      </div>
+  </div>
+  <hr style="margin: 0;">
+
+  <nav class="navbar navbar-expand-lg" style="padding-bottom: 0;">
+  <div class="container">
+
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()" *ngIf="isMobile">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-nav ml-auto" [class.mobile-hidden]="!navbarOpen">
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" routerLink="/products" (click)="toggleOurProducts()">Our Products</a>
+      <a class="nav-link" (click)="toggleAboutUs()">About Us</a>
+      <a class="nav-link" href="#">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+</div> -->
+
+
+<div class="main2">
+   <!-- Hero Section -->
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-md-4" style="background-color: #D2B48C">
+      <!-- <div class="row">
+        <div class="col-md-8">
+          <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+            <div>
+              <h1 class="display-4 font-italic">Buiji Gunny Merchant</h1>
+              <p class="lead my-3">Exclusive distributor of premium gunny bags in the region. Explore our wide range of products tailored to your needs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-light mb-3" style="display: flex; justify-content:center; 
+          background-color: transparent !important; align-items:center; padding: 8px;">
+            <img src="assets/own.jpg" alt="Bujji Gunny Merchant"  style="width: 85%;">
+            <p style="margin: 0;">Shaik Jan Sharief</p>
+          </div>
+        </div>
+      </div> -->
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+        <div>
+          <h1 class="display-4 font-italic" id="hed" style="font-family: emoji;">Bujji Gunny Merchant</h1>
+          <p class="lead my-3" style="font-family: auto; line-height: 1.3;">We deliver all types of jute, gunny bags, plastic 
+            varietes, tobacco, and cotton carriers. We also buy all types of old bags. Delivery is available to all locations.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="gallery">
+        <img [src]="currentImage" class="card-img-top" alt="Chilakaluripet Image"
+            (click)="nextImage()" (mouseenter)="stopCarousel()" (mouseleave)="startCarousel()"
+            style="max-width: 100%;">
+       </div>
+    </div>
+  </div>
+
+  
+</div>
+
+<br>
+
+<!-- Product Section -->
+<div class="container text-center my-3">
+  <div #ourProductsSection *ngIf="showOurProducts" class="products-section">
+    <h2 class="mb-4">Our Products</h2>
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="assets/PT.png" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+          <h5 class="card-title">Tobacco Carriers</h5>
+          <p class="card-text">Durable jute bags ideal for storing and carrying tobacco.</p>
+          <a href="#" class="btn" routerLink="/products">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="assets/PM.png" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+          <h5 class="card-title">Mirchi Bags</h5>
+          <p class="card-text">Sturdy bags for keeping mirchi; maintains freshness and quality.</p>
+          <a href="#" class="btn" routerLink="/products">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="assets/P3.png" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+          <h5 class="card-title">Chick Peas Bags</h5>
+          <p class="card-text">Reliable containers for chick peas, ensures longevity and protection.</p>
+          <a href="#" class="btn" routerLink="/products">View More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="assets/P4.png" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+          <h5 class="card-title">Rice Bags</h5>
+          <p class="card-text">Perfect for rice storage; strong, sustainable, and preserves contents.</p>
+          <a href="#" class="btn" routerLink="/products">View More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  <br>
+
+  <!-- About Us -->
+  <div #aboutUsSection *ngIf="showAboutUs" class="about-section">
+    <h2 class="text-center mb-4">About Us</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card bg-light mb-3">
+          <div class="card-body">
+            <h3 class="card-title">Our Journey</h3>
+            <p class="card-text">Bujji Gunny Merchants began its journey with a vision to provide high-quality agricultural packaging solutions to farmers and businesses. Founded by Shaik Bujji, the company focused on meeting the needs of the agricultural community with dedication to quality and customer satisfaction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light mb-3">
+          <div class="card-body">
+            <h3 class="card-title">Our Beginning</h3>
+            <p class="card-text">The venture started humbly in 2009 as a small business catering to local farmers and traders. Shaik Bujji's commitment to supplying essential products such as gunny bags and tobacco sheets helped establish a foundation of trust and quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card bg-light mb-3">
+          <div class="card-body">
+            <h3 class="card-title">Our Growth</h3>
+            <p class="card-text">As the business grew, Bujji Gunny Merchants expanded its product range to include Chanaga BT bags and mirchi gunny bags, and began services to buy used gunny bags. This expansion helped the company reach a broader client base and cater to a wider range of needs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card bg-light mb-3">
+          <div class="card-body">
+            <h3 class="card-title">Our Commitment</h3>
+            <p class="card-text">Bujji Gunny Merchants remains dedicated to its mission of providing top-notch packaging solutions, continuously adapting to market needs and maintaining a customer-centric approach. The company's commitment to innovation and quality drives its ongoing success and customer loyalty.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div>
+</div>
+
+
+<!-- Footer -->
+<!-- <footer class="text-muted py-3 bg-light">
+  <div class="container">
+    <p class="mb-1">© 2024 Buiji Gunny Merchant - All Rights Reserved.</p>
+  </div>
+</footer> -->

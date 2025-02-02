@@ -1,0 +1,159 @@
+
+
+mat-divider {
+  border-top-color: rgba(95, 87, 87, 0.5); /* Change to your desired color */
+}
+
+
+
+.main {
+  padding: 10px;
+  /* position: fixed; */
+  width: 100%;
+  background-color: #FFF8DC;
+  /* z-index: 1000; */
+  padding-bottom: 0;
+}
+
+.content h1 {
+  font-size: 45px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo, .content, .contact {
+  flex: 0 0 33.33%; /* Prevents the columns from growing or shrinking */
+}
+
+.logo img {
+  width: 100%; /* Adjust this to control the size of the logo */
+}
+
+.contact {
+  display: flex;
+}
+
+.navbar {
+  font-size: 15px;
+  font-weight: 500;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0px 0;
+}
+
+.navbar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black; /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.navbar a:hover {
+  background-color: #DEB887; 
+  /* color: white; */
+}
+
+.navbar a.active {
+  background-color: #DEB887; 
+  color: white;
+}
+
+footer {
+  margin-top: 40px;
+  color: #6c757d !important; /* Grey */
+  background-color: #FFF8DC !important; /* Cornsilk */
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ensures the container fills the footer */
+}
+
+footer .Rights {
+  text-align: left; /* Ensures text is aligned to the left */
+  flex: 1; /* Takes up space needed for alignment */
+}
+
+footer .Eswar {
+  text-align: right; /* Ensures text and image are aligned to the right */
+  flex: 1; /* Takes up space needed for alignment */
+}
+
+footer a {
+  animation: pulse 2s infinite; /* Applying the pulsing effect */
+}
+
+.eswarimg{
+  width: 28%;
+}
+
+
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo, .content, .contact {
+    flex: 0 0 100%; /* Each section takes full width */
+  }
+ 
+  .logo img {
+    max-width: 60%;
+    margin: 0 auto; /* Center logo */
+  }
+
+  .contact {
+    justify-content: center;
+    margin-top: -10px; /* Adjust spacing */
+  }
+
+  .content h1 {
+    font-size: 35px; /* Smaller font for mobile */
+  }
+
+  .navbar {
+    display: flex; /* Ensures flexbox layout */
+    justify-content: space-between; /* Spaces the nav items across the navbar */
+    align-items: center; /* Vertically centers the links */
+    width: 100%; /* Ensures navbar takes full width */
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  .navbar a {
+    flex: 1; /* Ensures each link can expand to fill the space evenly */
+    color: black; /* Text color */
+    text-decoration: none; /* Removes underline */
+    text-align: center; /* Centers text within each link */
+    padding: 10px 15px; /* Padding around the text */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+  }
+
+  footer .container {
+    flex-direction: column; /* Stacks the flex children vertically */
+    text-align: center; /* Centers text and content */
+  }
+
+  footer .Rights, footer .Eswar {
+    flex: none; /* Removes flex grow/shrink */
+    width: 100%; /* Full width to each section */
+    text-align: center; /* Center alignment for text */
+    margin-bottom: 10px; /* Adds some space between the two paragraphs */
+  }
+
+  footer .Eswar a img {
+    width: 50%; /* Adjusts image size to be larger on smaller screens */
+  }
+}
+
+

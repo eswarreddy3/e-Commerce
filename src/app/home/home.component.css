@@ -1,0 +1,236 @@
+.main {
+  padding: 10px;
+  /* position: fixed; */
+  width: 100%;
+  background-color: #FFF8DC;
+  /* z-index: 1000; */
+  padding-bottom: 0;
+}
+
+.content h1 {
+  font-size: 45px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo, .content, .contact {
+  flex: 0 0 33.33%; /* Prevents the columns from growing or shrinking */
+}
+
+.logo img {
+  width: 100%; /* Adjust this to control the size of the logo */
+}
+
+.contact {
+  display: flex;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0px 0;
+}
+
+.navbar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black; /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.navbar a:hover {
+  background-color: #DEB887; /* A soft brown on hover */
+  color: white; /* White text on hover */
+}
+
+.navbar a.active {
+  color: #D2691E; /* Distinct color for the active link */
+  font-weight: bold; /* Make the active link bold */
+}
+
+
+
+.container.mt-4 {
+  /* padding-top: 165px;  */
+}
+
+/* Responsive Adjustment Example */
+/* @media (max-width: 768px) {
+  .container.mt-4 {
+    padding-top: 360px;
+  }
+} */
+
+.about-section .card {
+  /* background: linear-gradient(to bottom, rgba(255, 248, 220, 0.7), rgba(255, 248, 220, 0.9)), url('assets/PR2.png'); */
+  background-size: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-section .card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: #8B4513 !important; /* Saddle Brown for titles */
+  font-size: 18px;
+}
+
+.card-text {
+  color: #3E2723 !important; /* Dark Brown for text */
+}
+
+.card-deck .card {
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.card-body {
+  height: auto;
+  min-height: 160px;
+}
+
+.navbar {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.jumbotron {
+  background-color: #D2B48C !important; /* Tan */
+}
+
+.card {
+  margin-top: 20px;
+  background-color: #FFF8DC !important; /* Cornsilk  */
+}
+
+footer {
+  margin-top: 40px;
+  color: #6c757d !important; /* Grey */
+  background-color: #FFF8DC !important; /* Cornsilk */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Georgia', serif; /* Overall document font */
+}
+
+.btn{
+  background-color: #905932;
+  color: white;
+}
+
+#hed {
+  font-size: 55px; 
+  line-height: 1.2;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+*{
+  font-family: auto;
+}
+
+
+
+/* Ensure navbar links are always visible on desktop */
+@media (min-width: 769px) {
+  .navbar-nav {
+    display: flex !important;  
+  }
+
+  .navbar-toggler {
+    display: none;  
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: block; 
+  }
+
+  .navbar-toggler-icon {
+    /* Icon styling as previously defined */
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo, .content, .contact {
+    flex: 0 0 100%; /* Make each section take full width of the screen */
+  }
+
+  .logo img {
+    max-width: 60%; /* Reduce the logo size */
+    margin: 0 auto; /* Center logo horizontally */
+  }
+
+  .contact {
+    justify-content: center; /* Center the contact information */
+    margin-top: -10px; /* Add some space between the contact info and the above element */
+  }
+
+  .content h1 {
+    font-size: 35px;
+  }
+  
+
+  .navbar {
+    flex-direction: column; /* Stack navbar links vertically */
+  }
+
+  .navbar a {
+    display: block; /* Make each link full width */
+    text-align: center; /* Center-align the text in the links */
+    margin: 5px 0; /* Add space between links */
+  }
+
+  .jumbotron {
+    padding: 20px; /* Reduce padding in the jumbotron for space efficiency */
+    text-align: center; /* Center text for better readability */
+  }
+
+  .jumbotron .col-md-6 {
+    width: 100%; /* Make jumbotron full width */
+  }
+
+  .products-section .row .col-md-3 {
+    width: 50%; /* Adjust product cards to take half width in smaller screens */
+    margin-bottom: 20px; /* More space between rows */
+  }
+
+  .about-section .row .col-md-6 {
+    width: 100%; /* Full width for about section columns */
+  }
+
+  .card-body {
+    padding: 10px; /* Reduce padding within cards for space efficiency */
+  }
+
+  footer {
+    padding: 10px 20px; /* Adjust footer padding */
+    text-align: center; /* Center-align footer text */
+  }
+}
