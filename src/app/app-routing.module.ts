@@ -14,11 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled',  // Adjusts the scroll position on navigation
-    anchorScrolling: 'enabled',  // Enables scrolling to anchor elements
-    scrollOffset: [0, 64]  // [x, y] - Adjust this if there is a fixed header or offset
-  })],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
